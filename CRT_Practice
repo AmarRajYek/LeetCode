@@ -1,1 +1,47 @@
 PROBLEMS
+// DISTINCT ELEMENTS 
+class Main {
+    public static void main(String[] args) {
+        int arr[] = {1,1,2,2,3,4,4};
+        int n = arr.length;
+        int i=0,j=1;
+        while(j<n){
+        if(arr[i] != arr[j]){
+            i++;
+            arr[i] =arr[j];
+        }
+        j++;
+        }
+        for(int k=0;k<=i;k++){
+            System.out.print(" "+arr[k]);
+        }
+        
+    }
+}
+
+
+//TWO SUM  problem
+static int[] TwoSum(int arr[] ,int tar){
+    HashMap<Integer,Integer> map = new HashMap<>();
+      int n = arr.length();
+        for(int i =0 ;i<n;i++){
+          int need = tar - arr[i];
+            if(map.containsKey(need){
+              return new int[] {map.get(need),i};
+            }
+          map.put(arr[i],i);
+       }
+        return new int[] {};
+}
+int[] arr = {1,5,3,4};
+int res[] = TwoSum(arr,tar);
+  for(int i=0;i<res.length;i++){
+    System.out.print(res[i]);
+  }
+(OR ANOTHER APPROACT TO PRINT)
+for(int i=0;i<res.length;i++){
+      int index = res[i];
+      int value = arr[index];
+      
+    System.out.println(" "+index+" value :"+value);
+  }
