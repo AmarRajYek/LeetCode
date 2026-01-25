@@ -45,3 +45,57 @@ for(int i=0;i<res.length;i++){
       
     System.out.println(" "+index+" value :"+value);
   }
+
+
+//FINDING THE SECOND SMALLEST ELEMENT
+class Main{
+    public static void main(String amar[]){
+        int arr[] ={1,5,6,9,7,787,97,97};
+        int Smallest = Integer.MAX_VALUE;
+        int Secondsmall = Integer.MAX_VALUE;
+        for(int num : arr){
+            if(num < Smallest){
+                Secondsmall = Smallest;
+                Smallest = num;
+            }
+            else if(num<Secondsmall && num != Smallest){
+                Secondsmall = num;
+            }
+        }
+        if(Secondsmall == Integer.MAX_VALUE){
+            System.out.print("notfound" + Secondsmall);
+        }else{
+            System.out.println(Secondsmall);
+        }
+        
+    }
+}
+
+
+//FINDING THE SECOND LARGEST ELEMENT
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {12, 35, 1, 10, 34, 1};
+
+        // Initialize largest and second largest
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for (int num : arr) {
+            if (num > largest) {
+                // update both
+                secondLargest = largest;
+                largest = num;
+            } else if (num > secondLargest && num != largest) {
+                // update only secondLargest
+                secondLargest = num;
+            }
+        }
+
+        if (secondLargest == Integer.MIN_VALUE) {
+            System.out.println("No second largest element found.");
+        } else {
+            System.out.println("Second largest element is: " + secondLargest);
+        }
+    }
+}
