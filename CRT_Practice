@@ -99,3 +99,60 @@ class Main {
         }
     }
 }
+
+
+//-->> PRIME OR NOT PRIME O(root n ) or O(1)
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
+        if (num <= 1) {
+            System.out.println("Not Prime");
+            return;
+        }
+
+        boolean prime = true;
+
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                prime = false;
+                break;
+            }
+        }
+
+        if (prime)
+            System.out.println("Prime");
+        else
+            System.out.println("Not Prime");
+    }
+}
+
+
+/--->> Rotate Array by K 
+class Main {
+    static void reverse(int arr[], int start, int end){
+        while(start<end){
+            int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        
+        start++;
+        end--;
+        }
+    }
+    public static void main(String[] args) {
+        int arr[] = {1,8,7,4,3};
+        int k=2;
+        int n =arr.length;
+        
+        k = k%n;
+        reverse(arr,0,n-1);
+        reverse(arr,0,k-1);
+        reverse(arr,k,n-1);
+        for(int nr : arr){
+        System.out.print("  "+nr );    
+        }  
+    }
+}
