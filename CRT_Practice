@@ -156,3 +156,90 @@ class Main {
         }  
     }
 }
+
+//--->>> Email validator
+class Main {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        System.out.print("Enter your Mail ID : ");
+        String mail = sc.nextLine();
+            if(mail.matches("[a-zA-Z0-9]+@[a-zA-Z]+\\.com")){
+                System.out.println("VALID");
+            }else{
+                System.out.println("INVALID");
+            }
+    }
+}
+
+//---->> To print the "X"  pattern
+*   *
+ * * 
+  *  
+ * * 
+*   *
+class Main {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+        if(n%2 != 0){              //if n is odd number then only print pattern else throw Error
+            for(int i=0;i<n;i++){
+                for(int j=0;j<n;j++){
+                    if(i==j || j == (n-i-1)){
+                        System.out.print("*");
+                    }else{
+                        System.out.print(" ");
+                    }
+                }
+                System.out.print("\n");
+            }
+            
+        }else{
+            System.out.println("ERROR");
+        }
+    }
+}
+
+//--->>> to Print the Follwing pattern
+    *
+   **
+  ***
+ ****
+*****
+class Main{
+    public static void main(String args[]){
+            for(int i =0 ;i<n;i++){
+                for(int j=0;j<n-i;j++){
+                    System.out.print(" ");
+                }
+                    for(int k=0;k<=i;k++){
+                        System.out.print("*");
+                    }
+            System.out.println();
+            }
+    }
+}
+
+
+//---->>> Program to print PYRIMID PATTERN
+for(int i=1;i<=n;i++){
+    for(int j=i;j<n;j++){
+        System.out.print(" ");
+    }
+    for(int k=1;k<=(2*i-1);k++){
+        System.out.print("*");
+    }
+System.out.println();
+}
+
+
+//----->> Flyod's triagle
+
+        int num =1;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(num+" ");
+                num++;
+            }
+            System.out.println();
+        }
