@@ -243,3 +243,35 @@ System.out.println();
             }
             System.out.println();
         }
+
+///--- Validating an Expression (+45435.25) 
+// +-,digits,'.'
+Stack<Character> stack = new Stack<>();
+    boolean hasDigit = false;
+    boolean hasDecimal = false;
+    for(int i = 0;i<s.length();i++){
+        char c = s.charAt(i);
+        if(i == 0 && (c == '+' || c == '-')){
+                stack.push(c);
+            }else if(Character.isDigit(c)){
+                
+                    stack.push(c);
+                    hasDigit = true;
+                    
+                    
+        }else if(c == '.'){
+            if(hasDecimal){
+                return false;
+            }
+            hasDecimal = true;
+            stack.push(c);
+        }
+        else{
+                return false;
+        }
+    }
+    if(!hasDigit){
+        return false;
+    }
+    return true;
+}
