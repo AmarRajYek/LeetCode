@@ -7,6 +7,12 @@ class Palindrome {
             }
         return true;
     }
+
+    //another easiest metod using StringBuilder
+    // public boolean chekPal(int num){
+    //     String s = String.valueOf(str);
+    //     return s.equals(new StringBuilder(s).reverse().toString());
+    // }
     public static void main(String args[]){
         int num = 146;
         //Palindrome p = new Palindrome();
