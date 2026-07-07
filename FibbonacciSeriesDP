@@ -1,0 +1,21 @@
+//java program to calculate Fibboacci Series using recursion and Dynamic Programming
+class Main{
+  static int[] m;
+    public static void fib(int n){
+        if(m[n] != -1){
+            if(n == 0 || n==1){
+              m[n] = 1;
+            }else{
+              m[n] = fib(n-1)+fib(n-2);
+            }
+        }
+return m[n];
+    }
+public static void main(String ar[]){
+  Scanner sc  = new Scanner(System.in);
+  System.out.print("Enter n :");
+  int n = sc.nextInt();
+  m = new int[n+1];
+  System.out.print(fib(n));
+}
+}
